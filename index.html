@@ -30,21 +30,21 @@
 
 
     <script>
-        // gsap.registerPlugin(ScrollTrigger);
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: '.animated-element',
-                start: 'top center',
-                end: 'bottom center',
-                scrub: true,
-                markers: false,
+                start: '-50% center',
+                end: '200% center',
+                scrub: false,
+                markers: true,
+                toggleActions: 'play reverse play reverse', //'onEnter onLeave onEnterBack onLeaveBack'
 
             }
         })
 
         tl.to('.animated-element', {
-            x: 800
-
+            x: 800,
+            duration: 3,
         })
 
         const lenis = new Lenis()

@@ -10,13 +10,12 @@
 
 <body>
     <div class="spacer"></div>
-    <div class="spacer">
+    <div class="">
         <div class="animated-element">
             <h2 class="">Mastering GSAP</h2>
             <p class="">
                 This is a simple card with a title and a scroll animation.
             </p>
-
         </div>
     </div>
     <div class="spacer"></div>
@@ -28,7 +27,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"
         integrity="sha256-eUny2Hql6qBbqmuoQ60u6ueG2eCZVKQaGygqwCPquug=" crossorigin="anonymous"></script>
 
-
     <script>
         let tl = gsap.timeline({
             scrollTrigger: {
@@ -38,7 +36,6 @@
                 scrub: true,
                 markers: true,
                 toggleActions: 'play reverse play reverse', //'onEnter onLeave onEnterBack onLeaveBack'
-
             }
         })
 
@@ -49,9 +46,9 @@
 
         const lenis = new Lenis()
 
-        lenis.on('scroll', (e) => {
-            console.log(e)
-        })
+        // lenis.on('scroll', (e) => {
+        //     console.log(e)
+        // })
 
         function raf(time) {
             lenis.raf(time)
@@ -59,9 +56,7 @@
         }
 
         requestAnimationFrame(raf)
-
     </script>
-
 
 </body>
 
